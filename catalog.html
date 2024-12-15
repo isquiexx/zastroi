@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - ЭлитСтрой</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="catalog.html" class="active">Готовые дома</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Контент каталога -->
+    <main>
+        <div class="catalog-container">
+            <h1 class="main-title">Каталог элитных домов</h1>
+            <div class="catalog-grid">
+                <!-- Карточка дома -->
+                <div class="house-card" onclick="openModal(0)">
+                    <video class="house-video" autoplay muted loop>
+                        <source src="videos/1h.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                    <h2>Степаньково</h2>
+                    <div class="house-details">
+                        <p><strong>Площадь:</strong> 2085 м²</p>
+                        <p><strong>Количество соток:</strong> 44</p>
+                        <p><strong>Расположение:</strong> Рублёво-Успенское шоссе, коттеджный поселок «Риита»</p>
+                        <p><strong>Описание:</strong> Камерный поселок с большими резиденциями, расположенный в сосновом и лиственном лесу.</p>
+                    </div>
+                </div>
+
+                <!-- Другие карточки домов (повторить для каждого дома) -->
+            </div>
+        </div>
+    </main>
+    <main>
+        <div class="catalog-container">
+            <div class="catalog-grid">
+                <!-- Карточка дома -->
+                <div class="house-card" onclick="openModal(0)">
+                    <video class="house-video" autoplay muted loop>
+                        <source src="videos/2h.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                    <h2>Агаларов Эстейт</h2>
+                    <div class="house-details">
+                        <p><strong>Площадь:</strong> 2085 м²</p>
+                        <p><strong>Количество соток:</strong> 44</p>
+                        <p><strong>Расположение:</strong> Рублёво-Успенское шоссе, коттеджный поселок «Риита»</p>
+                        <p><strong>Описание:</strong> Камерный поселок с большими резиденциями, расположенный в сосновом и лиственном лесу.</p>
+                    </div>
+                </div>
+
+                <!-- Другие карточки домов (повторить для каждого дома) -->
+            </div>
+        </div>
+    </main>
+    <main>
+        <div class="catalog-container">
+            <div class="catalog-grid">
+                <!-- Карточка дома -->
+                <div class="house-card" onclick="openModal(0)">
+                    <video class="house-video" autoplay muted loop>
+                        <source src="videos/3h.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                    <h2>Морские террасы</h2>
+                    <div class="house-details">
+                        <p><strong>Площадь:</strong> 1900 м²</p>
+                        <p><strong>Количество соток:</strong> 44</p>
+                        <p><strong>Расположение:</strong> Рублёво-Успенское шоссе, коттеджный поселок «Риита»</p>
+                        <p><strong>Описание:</strong> Камерный поселок с большими резиденциями, расположенный в сосновом и лиственном лесу.</p>
+                    </div>
+                </div>
+
+                <!-- Другие карточки домов (повторить для каждого дома) -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Модальное окно для просмотра видео -->
+    <div class="modal" id="modal">
+        <div class="modal-content" id="modal-content">
+            <button class="close-btn" onclick="closeModal()">×</button>
+            <div class="modal-body">
+                <div class="modal-slider">
+                    <!-- Видео, которое будет изменяться -->
+                    <video id="modal-video" class="modal-video" autoplay muted loop>
+                        <source src="videos/1h.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                </div>
+                <div class="modal-info">
+                    <h2 id="house-title"></h2>
+                    <ul>
+                        <li><strong>Площадь:</strong> <span id="house-size">2085 м²</span></li>
+                        <li><strong>Количество соток:</strong> <span id="house-land">44 сотки</span></li>
+                        <li><strong>Расположение:</strong> <span id="house-location">Рублёво-Успенское шоссе, коттеджный поселок «Риита»</span></li>
+                        <li><strong>Описание:</strong> <span id="house-description">Камерный поселок с большими резиденциями, расположенный в сосновом и лиственном лесу.</span></li>
+                        <li><strong>Основные характеристики:</strong> <span id="house-features">Красный полнотелый кирпич, монолитные перекрытия, натуральный камень травертин, гранит и дерево.</span></li>
+                        <li><strong>Остекление:</strong> <span id="house-glass">Трехкамерный стеклопакет в деревянном профиле.</span></li>
+                        <li><strong>Для хозяев:</strong> <span id="house-owners">Сауна, бассейн, спортивный зал, бильярдная, мужская и женская мастер-гардеробные.</span></li>
+                        <li><strong>Для персонала:</strong> <span id="house-staff">5 спален с собственными санузлами и гардеробными.</span></li>
+                        <li><strong>Отделка:</strong> <span id="house-finishing">Экологичные материалы, мебель и освещение от европейских производителей.</span></li>
+                        <li><strong>Архитектура:</strong> <span id="house-architecture">Обширное остекление, высокие потолки, просторные помещения.</span></li>
+                    </ul>
+                </div>
+            </div>
+            <button class="prev-btn" onclick="changeVideo(-1)">&#10094;</button>
+            <button class="next-btn" onclick="changeVideo(1)">&#10095;</button>
+        </div>
+    </div>
+    
+
+    <!-- Подвал -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 ЭлитСтрой. Все права защищены.</p>
+            <p>
+                <a href="contacts.html">Контакты</a> |
+                <a href="about.html">О нас</a> |
+                <a href="privacy.html">Политика конфиденциальности</a>
+            </p>
+            <p>Телефон: +7 (999) 123-45-67 | Email: info@elitstroy.ru</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

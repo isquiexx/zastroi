@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЭлитСтрой - Контакты</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-video">
+        <video autoplay loop muted>
+            <source src="videos/1v.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+        <div class="overlay"></div>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="catalog.html">Готовые дома</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>    
+    <main>
+        <h1>Контакты</h1>
+        <div id="map" style="width: 100%; height: 500px;"></div>
+    </main>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script>
+        ymaps.ready(function () {
+            var map = new ymaps.Map("map", {
+                center: [55.7558, 37.6173],
+                zoom: 10
+            });
+        });
+    </script>
+     <footer>
+        <div class="footer-content">
+            <p>© 2024 ЭлитСтрой. Все права защищены.</p>
+            <p>
+                <a href="contacts.html">Контакты</a> |
+                <a href="about.html">О нас</a> |
+                <a href="privacy.html">Политика конфиденциальности</a>
+            </p>
+            <p>Телефон: +7 (999) 123-45-67 | Email: info@elitstroy.ru</p>
+        </div>
+    </footer>
+</body>
+</html>
